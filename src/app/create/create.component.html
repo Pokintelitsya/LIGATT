@@ -1,0 +1,49 @@
+<div class='panel panel-primary'>
+  <div class='panel-heading'>
+    {{pageTitle}}
+  </div>
+
+  <div class='panel-body'>
+    <div class='row'>
+      <div class='col-md-6 form-group'>
+        <div class='row'>
+          <div class='col-md-3'>Name:</div>
+          <div class='col-md-6'><input type="text"placeholder="product product name" class="form-control" [(ngModel)]="product.productName"></div>
+        </div>
+        <div class='row'>
+          <div class='col-md-3'>Code:</div>
+          <div class='col-md-6'><input type="text"placeholder="product product code" class="form-control" [(ngModel)]="product.productCode"></div>
+        </div>
+        <div class='row'>
+          <div class='col-md-3'>Description:</div>
+          <div class='col-md-6'><input type="text"placeholder="product description" class="form-control" [(ngModel)]="product.description"></div>
+        </div>
+        <div class='row'>
+          <div class='col-md-3'>Availability:</div>
+          <div class='col-md-6'><input type="date"placeholder="product release date" class="form-control" [(ngModel)]="product.releaseDate"></div>
+        </div>
+        <div class='row'>
+          <div class='col-md-3'>Price:</div>
+          <div class='col-md-6'><input type="number"placeholder="product price" class="form-control" [(ngModel)]="product.price"></div>
+        </div>
+        <div class='row'>
+          <div class='col-md-3'>Image Url:</div>
+          <div class='col-md-6'><input type="url"placeholder="product Url" class="form-control" [(ngModel)]="product.imageUrl"></div>
+        </div>
+        <div class='row'>
+          <div class='col-md-3'>5 Star Rating:</div>
+          <div class='col-md-6'>
+            <input type="number" max="5" min="0" [(ngModel)]="product.starRating" placeholder="product rating" class="form-control">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class='panel-footer'>
+    <a class='btn btn-default' (click)='onSave()' style='width:80px'>
+      <i class='glyphicon glyphicon-chevron-left'></i> Save
+    </a>
+  </div>
+</div>
