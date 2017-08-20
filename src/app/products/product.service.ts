@@ -23,7 +23,7 @@ export class ProductService {
       return JSON.parse(localStorage.getItem('products'));
     }
     getProductFromStorage(id: number): IProduct {
-      return JSON.parse(localStorage.getItem('products'))[ id -1 ];
+      return localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products'))[ id - 1 ] : null;
     }
     getProduct(id: number): Observable<IProduct> {
         return this.getProducts()
